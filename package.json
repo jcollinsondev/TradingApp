@@ -1,0 +1,28 @@
+{
+  "name": "tradingapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "start": "npm run build & node -r ts-node/register/transpile-only -r tsconfig-paths/register ./build/index.js",
+    "start:dev": "nodemon"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.7.15",
+    "@types/pino": "^7.0.5",
+    "nodemon": "^2.0.19",
+    "pino-pretty": "^9.1.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.1.0",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "pino": "^8.5.0"
+  }
+}
